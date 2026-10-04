@@ -17,6 +17,11 @@ enum Shot {
     MARISAB = 3;
 }
 
+enum Mode {
+    MODE_STANDARD = 0;
+    MODE_CHALLENGE = 1;
+}
+
 message ReplayData {
     thdef.GameId game = 1;
     Version version = 2;
@@ -26,6 +31,7 @@ message ReplayData {
     string date = 6;
     string name = 7;
     float slowdown = 8;
+    Mode mode = 9;
     repeated StageData stages = 100;
 }
 
